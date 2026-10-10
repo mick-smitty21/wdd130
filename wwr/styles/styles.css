@@ -175,6 +175,10 @@
     main section img{
         box-sizing: border-box;
     }
+    .home-grid{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
     .card-img, .mountains{
         width: 100%;
     }
@@ -199,7 +203,7 @@
         grid-row: 5/8;
         box-shadow: 5px 5px 10px #9e1577;
     }
-    card-img:hover{
+    .card-img:hover{
         opacity: 0.6;
         transform: scale(1.1);
     }
