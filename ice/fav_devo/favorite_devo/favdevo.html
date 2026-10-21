@@ -15,8 +15,54 @@
     </header>
     <main>
       <div class="content-box">
-        <!-- Add your devotional content here -->
-         Add your table and your form here.
+        <h2>Favorites</h2>
+        <table class="devo-table">
+          <thead>
+            <tr>
+              <th>Speaker</th>
+              <th>Title</th>
+              <th>Location</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Elder David A. Bednar</td>
+              <td>Things as They Really Are</td>
+              <td>BYU-Idaho</td>
+              <td>2009</td>
+            </tr>
+            <tr>
+              <td>Elder David A. and Sister Susan K. Bednar</td>
+              <td>BYU-Idaho 25th Anniversary Devotional</td>
+              <td>BYU-Idaho</td>
+              <td>2026</td>
+            </tr>
+            <tr>
+              <td>Elder G&eacute;rald and Sister Val&eacute;rie Causs&eacute;</td>
+              <td>Children of the Restoration</td>
+              <td>BYU-Idaho</td>
+              <td>2026</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Add a Devotional</h2>
+        <form class="devo-form">
+          <label for="speaker">Speaker</label>
+          <input type="text" id="speaker" name="speaker">
+
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title">
+
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location">
+
+          <label for="year">Year</label>
+          <input type="text" id="year" name="year">
+
+          <button type="button">Add Devotional</button>
+        </form>
       </div>
     </main>
   </div>
