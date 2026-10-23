@@ -3,9 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jacob Wagner's WDD130 course portal: every assignment, file and image in one place.">
+    <meta name="author" content="Jacob Wagner">
     <title>WDD 130 Portal</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
-    
+<body id="top">
+    <header>
+        <img src="images/portal_logo_trans.png" alt="WDD130 Portal logo: laptop with code brackets" width="80" height="80">
+        <div>
+            <h1>Jacob Wagner &mdash; WDD130 Portal</h1>
+            <p>Web Fundamentals &middot; Fall 2026 &middot; Every assignment, file and image in one place</p>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="https://mick-smitty21.github.io/wdd130/wwr/index.html" target="_blank">WWR</a>
+            <a href="ice.html">ICE</a>
+            <a href="about.html">About Me</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- MAIN · HERO IMAGE -->
+        <section id="hero">
+            <img src="images/hero-img.jpg" alt="Desk with a laptop showing code on screen" width="1120" height="340">
+        </section>
+
+        <!-- MAIN · WELCOME + QUICK LINKS -->
+        <section id="welcome">
+            <div>
+                <h2>Welcome to my course portal</h2>
+                <p>This site is the hub for everything I build in WDD130. Each link below points to a page or file hosted on GitHub Pages, so I can find any assignment in two clicks and my instructor can review my progress week by week.</p>
+                <h3>What you'll find here</h3>
+                <ul>
+                    <li>Weekly WWR site builds and their source files</li>
+                    <li>ICE practice exercises</li>
+                    <li>Images and media used across projects</li>
+                    <li>A short bio on the About Me page</li>
+                </ul>
+            </div>
+            <aside>
+                <h3>Quick links</h3>
+                <ul>
+                    <li><a href="https://github.com/mick-smitty21/wdd130" target="_blank">GitHub repository</a></li>
+                    <li><a href="https://byui.instructure.com/courses/427394/assignments/syllabus" target="_blank">Course syllabus</a></li>
+                    <li><a href="https://validator.w3.org/" target="_blank">W3C HTML validator</a></li>
+                    <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS validator</a></li>
+                </ul>
+            </aside>
+        </section>
+
+        <!-- MAIN · WEEKLY TRACKER -->
+        <section id="tracker">
+            <h2>This week's assignments</h2>
+            <p class="updated">Updated every Sunday</p>
+            <p class="week-label">Week 05 &middot; <time datetime="2026-10-19">Oct 19</time>&ndash;<time datetime="2026-10-25">25, 2026</time></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Assignment</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Due</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Links</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Ice Challenge 02</th>
+                        <td>ICE</td>
+                        <td>Favorite devotionals forms and tables</td>
+                        <td><time datetime="2026-10-20">Tue, Oct 20</time></td>
+                        <td><span class="status submitted">Submitted</span></td>
+                        <td><a href="https://byui.instructure.com/courses/427394/assignments/17210929?module_item_id=45232340" target="_blank">Canvas</a> &middot; <a href="https://mick-smitty21.github.io/wdd130/ice/fav_devo/favorite_devo/favdevo.html" target="_blank">My work</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ice Challenge 03</th>
+                        <td>ICE</td>
+                        <td>Build a Halloween-themed page</td>
+                        <td><time datetime="2026-10-21">Wed, Oct 21</time></td>
+                        <td><span class="status submitted">Submitted</span></td>
+                        <td><a href="https://byui.instructure.com/courses/427394/assignments/17210931?module_item_id=45232342" target="_blank">Canvas</a> &middot; <a href="https://mick-smitty21.github.io/wdd130/ice/halloween/halloween/index.html" target="_blank">My work</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Frontend development basics</th>
+                        <td>Quiz</td>
+                        <td>Frontend development fundamentals</td>
+                        <td><time datetime="2026-10-22">Thu, Oct 22</time></td>
+                        <td><span class="status submitted">Submitted</span></td>
+                        <td><a href="https://byui.instructure.com/courses/427394/quizzes/6020777" target="_blank">Canvas</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Portal page check 200</th>
+                        <td>Progress update</td>
+                        <td>HTML Programmed for Portal Page</td>
+                        <td><time datetime="2026-10-24">Sat, Oct 24</time></td>
+                        <td><span class="status in-progress">In-progress</span></td>
+                        <td><a href="https://byui.instructure.com/courses/427394/assignments/17210933" target="_blank">Canvas</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- MAIN · WEEKLY GOALS -->
+        <section id="goals">
+            <div>
+                <h2>My goals this week</h2>
+                <p>Beyond the required assignments, I set a few personal goals each Sunday to push my skills further. Checked boxes are goals I've finished.</p>
+                <h3>Last week's reflection</h3>
+                <p>Relative file paths finally clicked. Next I want to get faster at debugging layout in DevTools.</p>
+            </div>
+            <aside>
+                <h3>Week 06 goals</h3>
+                <ul>
+                    <li><label><input type="checkbox" checked disabled> Run every page through the W3C validator</label></li>
+                    <li><label><input type="checkbox" checked disabled> Commit to GitHub at least 3 times</label></li>
+                    <li><label><input type="checkbox" disabled> Fix one layout bug using DevTools</label></li>
+                    <li><label><input type="checkbox" disabled> Read one article to expand my knowledge</label></li>
+                    <li><label><input type="checkbox" disabled> Help a classmate with their assignment</label></li>
+                </ul>
+                <p class="week-label">2 of 5 complete &middot; updated Sunday</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jacob Wagner &middot; WDD130</p>
+        <p>Last updated <time datetime="2026-10-17" class="week-label">Oct 17, 2026</time></p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
 </body>
 </html>
