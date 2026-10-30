@@ -111,8 +111,25 @@
             <div>
                 <h2>My goals this week</h2>
                 <p>Beyond the required assignments, I set a few personal goals each Sunday to push my skills further. Checked boxes are goals I've finished.</p>
-                <h3>Last week's reflection</h3>
-                <p>Relative file paths finally clicked. Next I want to get faster at debugging layout in DevTools.</p>
+                <h3>Suggest a goal</h3>
+                <form action="#" method="get" id="goal-form">
+                    <label for="goal-text">Goal</label>
+                    <input type="text" id="goal-text" name="goal" placeholder="e.g. Build a page using only flexbox" required>
+
+                    <label for="goal-category">Category</label>
+                    <select id="goal-category" name="category">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="git">Git &amp; GitHub</option>
+                        <option value="accessibility">Accessibility</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="goal-reason">Why this goal? <span class="optional">(optional)</span></label>
+                    <textarea id="goal-reason" name="reason" rows="3"></textarea>
+
+                    <button type="submit">Suggest goal</button>
+                </form>
             </div>
             <aside>
                 <h3>Week 06 goals</h3>

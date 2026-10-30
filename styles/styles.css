@@ -1,0 +1,508 @@
+/* ---------- Base ---------- */
+
+
+body {
+    margin: 0;
+    background-color: #101820;
+    color: #F1F5F9;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+}
+
+
+h2 {
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+}
+
+
+h3 {
+    font-size: 1.15rem;
+}
+
+
+p {
+    margin: 0 0 1em;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+a {
+    color: #00B4D8;
+    text-underline-offset: 3px;
+}
+
+
+a:hover {
+    color: #F4A261;
+}
+
+
+a:focus-visible {
+    outline: 2px solid #F4A261;
+    outline-offset: 2px;
+}
+
+
+ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+
+/* ---------- Header ---------- */
+header {
+    background-color: #1C2936;
+    display: grid;
+    grid-template-columns: max(1rem, (100% - 1120px) / 2) auto 1fr max(1rem, (100% - 1120px) / 2);
+    align-items: center;
+    column-gap: 0;
+    padding-top: 1.25rem;
+}
+
+
+header > img {
+    grid-column: 2;
+    margin-right: 1rem;
+}
+
+
+header > div {
+    grid-column: 3;
+}
+
+
+header > img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+
+header h1 {
+    font-size: clamp(1.4rem, 1rem + 2vw, 2.25rem);
+    margin: 0;
+}
+
+
+header p {
+    margin: 0.25rem 0 0;
+    color: #A9B6C3;
+    font-size: 0.9rem;
+}
+
+
+/* Nav runs full width beneath the logo and title */
+nav {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+    padding: 0 max(1rem, (100% - 1120px) / 2);
+    background-color: #273D4D;
+    border-bottom: 3px solid #00B4D8;
+}
+
+
+nav a {
+    color: #F1F5F9;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.75rem 1.1rem;
+}
+
+
+nav a:hover {
+    color: #101820;
+    background-color: #F4A261;
+}
+
+
+nav a.active {
+    color: #101820;
+    background-color: #00B4D8;
+}
+
+
+/* ---------- Main layout ---------- */
+main {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+}
+
+
+main > section {
+    margin-bottom: 3rem;
+}
+
+
+/* Cards: Quick links + Week goals */
+aside {
+    background-color: #1C2936;
+    border: 1px solid #273D4D;
+    border-top: 3px solid #00B4D8;
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+}
+
+
+/* ---------- Hero ---------- */
+#hero img {
+    width: 100%;
+    aspect-ratio: 1120 / 340;
+    object-fit: cover;
+    border-radius: 6px;
+    outline: 1px solid #273D4D;
+    outline-offset: -1px;
+}
+
+
+/* ---------- Welcome + Quick links ---------- */
+#welcome,
+#goals {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+
+#welcome li {
+    margin-bottom: 0.35rem;
+}
+
+
+#welcome aside li {
+    margin-bottom: 0.6rem;
+}
+
+
+/* ---------- Weekly tracker ---------- */
+#tracker {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    column-gap: 1rem;
+}
+
+
+#tracker h2 {
+    margin: 0;
+}
+
+
+.updated {
+    color: #A9B6C3;
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+
+.week-label {
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem;
+    color: #A9B6C3;
+}
+
+
+#tracker .week-label {
+    grid-column: 1 / -1;
+    color: #F4A261;
+    font-weight: bold;
+    margin: 0.5rem 0 1rem;
+}
+
+
+table {
+    grid-column: 1 / -1;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1C2936;
+    font-size: 0.9rem;
+}
+
+
+th,
+td {
+    text-align: left;
+    padding: 0.85rem 0.9rem;
+    border: 1px solid #273D4D;
+    vertical-align: middle;
+}
+
+
+thead th {
+    background-color: #273D4D;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+
+tbody tr:hover {
+    background-color: #22323F;
+}
+
+
+tbody th {
+    font-weight: bold;
+}
+
+
+/* Status badges */
+.status {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.15rem 0.55rem;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+
+.status.submitted {
+    background-color: #00B4D8;
+    color: #101820;
+    border: 2px solid #00B4D8;
+}
+
+
+.status.in-progress {
+    color: #F4A261;
+    border: 2px solid #F4A261;
+}
+
+
+.status.not-started {
+    color: #A9B6C3;
+    border: 2px dashed #A9B6C3;
+}
+
+
+/* ---------- Weekly goals ---------- */
+#goals aside ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+
+#goals aside li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #273D4D;
+}
+
+
+#goals aside li:last-child {
+    border-bottom: none;
+}
+
+
+#goals label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+
+/* Custom checkbox so disabled boxes don't render greyed out */
+input[type="checkbox"] {
+    appearance: none;
+    flex-shrink: 0;
+    width: 1.15rem;
+    height: 1.15rem;
+    margin: 0;
+    border: 2px solid #A9B6C3;
+    border-radius: 3px;
+    display: grid;
+    place-content: center;
+}
+
+
+input[type="checkbox"]:checked {
+    background-color: #00B4D8;
+    border-color: #00B4D8;
+}
+
+
+input[type="checkbox"]:checked::after {
+    content: "";
+    width: calc(0.3rem - 2px);
+    height: calc(0.6rem - 2px);
+    border: solid #101820;
+    border-width: 0 2px 2px 0;
+    transform: translateY(-1px) rotate(45deg);
+}
+
+
+#goals aside .week-label {
+    margin: 0;
+}
+
+
+/* Suggest a goal form */
+#goal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+#goal-form label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+#goal-form .optional {
+    font-weight: normal;
+    color: #A9B6C3;
+}
+
+#goal-form input,
+#goal-form select,
+#goal-form textarea {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 0.95rem;
+    color: #F1F5F9;
+    background-color: #1C2936;
+    border: 1px solid #273D4D;
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+}
+
+#goal-form input::placeholder {
+    color: #A9B6C3;
+}
+
+#goal-form input:focus,
+#goal-form select:focus,
+#goal-form textarea:focus {
+    outline: 2px solid #00B4D8;
+    outline-offset: 1px;
+}
+
+#goal-form textarea {
+    resize: vertical;
+}
+
+#goal-form button {
+    align-self: flex-start;
+    margin-top: 1rem;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #101820;
+    background-color: #00B4D8;
+    border: none;
+    border-radius: 6px;
+    padding: 0.65rem 1.25rem;
+    cursor: pointer;
+}
+
+#goal-form button:hover {
+    background-color: #F4A261;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: #1C2936;
+    border-top: 3px solid #00B4D8;
+    padding: 1.25rem max(1rem, (100% - 1120px) / 2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+}
+
+
+footer p {
+    margin: 0;
+}
+
+
+footer time {
+    color: #A9B6C3;
+}
+
+
+/* ---------- Small screens ---------- */
+@media (max-width: 719px) {
+    header > img {
+        width: 56px;
+        height: 56px;
+    }
+
+
+    #hero img {
+        aspect-ratio: 2 / 1;
+    }
+
+
+    nav a {
+        padding: 0.65rem 0.8rem;
+    }
+
+
+    /* Table scrolls sideways instead of breaking the page */
+    #tracker {
+        grid-template-columns: 1fr;
+    }
+
+
+    .updated {
+        margin-top: 0.25rem;
+    }
+
+
+    #tracker > * {
+        min-width: 0;
+    }
+
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* ---------- Wide screens: two-column sections ---------- */
+@media (min-width: 720px) {
+    #welcome {
+        grid-template-columns: 1fr 360px;
+        gap: 3rem;
+    }
+
+
+    #goals {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+
+
